@@ -47,6 +47,7 @@
 		8E8565BB1D441F64006A63B8 /* SoccerCoordinatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoccerCoordinatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E8565BF1D441F64006A63B8 /* SoccerCoordinatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoccerCoordinatorUITests.swift; sourceTree = "<group>"; };
 		8E8565C11D441F64006A63B8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8ED537D31D44301500FB4D6C /* SoccerCoordinator.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = SoccerCoordinator.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +100,7 @@
 			children = (
 				8E85659F1D441F64006A63B8 /* AppDelegate.swift */,
 				8E8565A11D441F64006A63B8 /* ViewController.swift */,
+				8ED537D31D44301500FB4D6C /* SoccerCoordinator.playground */,
 				8E8565A31D441F64006A63B8 /* Main.storyboard */,
 				8E8565A61D441F64006A63B8 /* Assets.xcassets */,
 				8E8565A81D441F64006A63B8 /* LaunchScreen.storyboard */,
@@ -482,6 +484,7 @@
 				8E8565C61D441F64006A63B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E8565C71D441F64006A63B8 /* Build configuration list for PBXNativeTarget "SoccerCoordinatorTests" */ = {
 			isa = XCConfigurationList;
@@ -490,6 +493,7 @@
 				8E8565C91D441F64006A63B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8E8565CA1D441F64006A63B8 /* Build configuration list for PBXNativeTarget "SoccerCoordinatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +502,7 @@
 				8E8565CC1D441F64006A63B8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
