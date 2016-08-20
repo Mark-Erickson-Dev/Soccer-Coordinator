@@ -1,5 +1,6 @@
 // Project 1: Soccer Coordinator
 
+// An array of dictionaries for all the league members
 let players = [
     
     ["Name" : "Joe Smith", "Height" : "42", "Soccer Experience" : "Yes", "Guardian Names(s)" : "Jim and Jan Smith"],
@@ -23,6 +24,7 @@ let players = [
     
 ]
 
+// An array of dictionaries for each team in the league
 var dragons = [[String : String]]()
 var sharks = [[String : String]]()
 var raptors = [[String : String]]()
@@ -32,80 +34,57 @@ var inexperiencedPlayers = [[String : String]]()
 
 var teamMax = players.count/3
 
+// Divide all players into an experienced or inexperienced array
 for player in players {
     
     let soccerXp = player["Soccer Experience"]
     
     if soccerXp == "Yes" {
-        
         experiencedPlayers.append(player)
-        
     } else {
-        
         inexperiencedPlayers.append(player)
     }
     
 }
 
+// Evenly distribute the experienced players to each team array
 for player in experiencedPlayers {
     
     if dragons.count < teamMax/2 {
-        
         dragons.append(player)
-        
     } else if sharks.count < teamMax/2 {
-        
         sharks.append(player)
-        
     } else {
-        
         raptors.append(player)
-        
     }
     
 }
 
+// Evenly distribute the inexperienced players to each team array
 for player in inexperiencedPlayers {
     
     if dragons.count < teamMax {
-        
         dragons.append(player)
-        
     } else if sharks.count < teamMax {
-        
         sharks.append(player)
-        
     } else {
-        
         raptors.append(player)
-        
     }
     
 }
 
-print("Experienced: \(experiencedPlayers)")
-print("\nInexperienced: \(inexperiencedPlayers)")
-print("\nDragons: \(dragons)")
-print("\nDragons count: \(dragons.count)")
-print("\nSharks: \(sharks)")
-print("\nSharks count: \(sharks.count)")
-print("\nRaptors: \(raptors)")
-print("\nRaptors count: \(raptors.count)\n")
-
+// Compose a letter for each team member
 func composeLetters(teamName: String, practice: String, teamArray: [[String : String]]) {
     
     for player in teamArray {
-        
         if let name = player["Name"], guardians = player["Guardian Names(s)"] {
-            
             print("Dear \(guardians),\n\n\t\(name) has been assigned to the \(teamName) Soccer Team. Please plan to attend the first team practice, which will be held on \(practice). See you there!\n\nYours Truly,\nJason Voorhees\nCrystal Lake Youth Soccer League Coordinator\n\n-----------------------------------------------------------------\n")
-            
         }
-        
     }
     
 }
 
+// Print the letters for each team
 composeLetters("Dragons", practice: "March 17, 1pm", teamArray: dragons)
 composeLetters("Sharks", practice: "March 17, 3pm", teamArray: sharks)
 composeLetters("Raptors", practice: "March 18, 1pm", teamArray: raptors)
